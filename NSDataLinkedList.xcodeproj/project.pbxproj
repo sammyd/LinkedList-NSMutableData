@@ -23,6 +23,7 @@
 		224E879F1613A01900E24DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224E877A1613A01800E24DB1 /* Foundation.framework */; };
 		224E87A71613A01900E24DB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 224E87A51613A01900E24DB1 /* InfoPlist.strings */; };
 		224E87AA1613A01900E24DB1 /* NSDataLinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87A91613A01900E24DB1 /* NSDataLinkedListTests.m */; };
+		224E87B51613A1B800E24DB1 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87B41613A1B800E24DB1 /* LinkedList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,9 @@
 		224E87A61613A01900E24DB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		224E87A81613A01900E24DB1 /* NSDataLinkedListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDataLinkedListTests.h; sourceTree = "<group>"; };
 		224E87A91613A01900E24DB1 /* NSDataLinkedListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDataLinkedListTests.m; sourceTree = "<group>"; };
+		224E87B31613A1B800E24DB1 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		224E87B41613A1B800E24DB1 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		224E87BA1614EEB100E24DB1 /* DynamicSizedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicSizedArray.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,9 @@
 				224E87911613A01800E24DB1 /* ViewController.m */,
 				224E87931613A01800E24DB1 /* ViewController.xib */,
 				224E877F1613A01800E24DB1 /* Supporting Files */,
+				224E87B31613A1B800E24DB1 /* LinkedList.h */,
+				224E87B41613A1B800E24DB1 /* LinkedList.m */,
+				224E87BA1614EEB100E24DB1 /* DynamicSizedArray.h */,
 			);
 			path = NSDataLinkedList;
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 				224E87851613A01800E24DB1 /* main.m in Sources */,
 				224E87891613A01800E24DB1 /* AppDelegate.m in Sources */,
 				224E87921613A01800E24DB1 /* ViewController.m in Sources */,
+				224E87B51613A1B800E24DB1 /* LinkedList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
