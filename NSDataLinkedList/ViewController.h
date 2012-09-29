@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LinkedList.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    NSMutableArray *testArray;
+    LinkedList *testList;
+}
+
+@property (retain, nonatomic) IBOutlet UILabel *lblArrayResult;
+@property (retain, nonatomic) IBOutlet UILabel *lblDataResult;
+
+- (IBAction)btnRunPressed:(id)sender;
 
 @end

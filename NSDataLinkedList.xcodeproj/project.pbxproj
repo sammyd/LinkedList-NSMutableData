@@ -25,6 +25,7 @@
 		224E87B51613A1B800E24DB1 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87B41613A1B800E24DB1 /* LinkedList.m */; };
 		224E87BD1616544D00E24DB1 /* LinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87BC1616544D00E24DB1 /* LinkedListTests.m */; };
 		224E87C016170FF400E24DB1 /* LinkedList+PrivateVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87BF16170FF400E24DB1 /* LinkedList+PrivateVariables.m */; };
+		224E87C21617361300E24DB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224E87C11617361300E24DB1 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		224E87BC1616544D00E24DB1 /* LinkedListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedListTests.m; sourceTree = "<group>"; };
 		224E87BE16170FF400E24DB1 /* LinkedList+PrivateVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LinkedList+PrivateVariables.h"; sourceTree = "<group>"; };
 		224E87BF16170FF400E24DB1 /* LinkedList+PrivateVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LinkedList+PrivateVariables.m"; sourceTree = "<group>"; };
+		224E87C11617361300E24DB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224E87C21617361300E24DB1 /* QuartzCore.framework in Frameworks */,
 				224E87791613A01800E24DB1 /* UIKit.framework in Frameworks */,
 				224E877B1613A01800E24DB1 /* Foundation.framework in Frameworks */,
 				224E877D1613A01800E24DB1 /* CoreGraphics.framework in Frameworks */,
@@ -113,6 +116,7 @@
 		224E87771613A01800E24DB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				224E87C11617361300E24DB1 /* QuartzCore.framework */,
 				224E87781613A01800E24DB1 /* UIKit.framework */,
 				224E877A1613A01800E24DB1 /* Foundation.framework */,
 				224E877C1613A01800E24DB1 /* CoreGraphics.framework */,
