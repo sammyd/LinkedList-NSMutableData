@@ -22,8 +22,9 @@
 		224E879E1613A01900E24DB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224E87781613A01800E24DB1 /* UIKit.framework */; };
 		224E879F1613A01900E24DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224E877A1613A01800E24DB1 /* Foundation.framework */; };
 		224E87A71613A01900E24DB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 224E87A51613A01900E24DB1 /* InfoPlist.strings */; };
-		224E87AA1613A01900E24DB1 /* NSDataLinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87A91613A01900E24DB1 /* NSDataLinkedListTests.m */; };
 		224E87B51613A1B800E24DB1 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87B41613A1B800E24DB1 /* LinkedList.m */; };
+		224E87BD1616544D00E24DB1 /* LinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87BC1616544D00E24DB1 /* LinkedListTests.m */; };
+		224E87C016170FF400E24DB1 /* LinkedList+PrivateVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87BF16170FF400E24DB1 /* LinkedList+PrivateVariables.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +58,13 @@
 		224E879C1613A01900E24DB1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		224E87A41613A01900E24DB1 /* NSDataLinkedListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSDataLinkedListTests-Info.plist"; sourceTree = "<group>"; };
 		224E87A61613A01900E24DB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		224E87A81613A01900E24DB1 /* NSDataLinkedListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDataLinkedListTests.h; sourceTree = "<group>"; };
-		224E87A91613A01900E24DB1 /* NSDataLinkedListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDataLinkedListTests.m; sourceTree = "<group>"; };
 		224E87B31613A1B800E24DB1 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 		224E87B41613A1B800E24DB1 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		224E87BA1614EEB100E24DB1 /* DynamicSizedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicSizedArray.h; sourceTree = "<group>"; };
+		224E87BB1616544D00E24DB1 /* LinkedListTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedListTests.h; sourceTree = "<group>"; };
+		224E87BC1616544D00E24DB1 /* LinkedListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedListTests.m; sourceTree = "<group>"; };
+		224E87BE16170FF400E24DB1 /* LinkedList+PrivateVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LinkedList+PrivateVariables.h"; sourceTree = "<group>"; };
+		224E87BF16170FF400E24DB1 /* LinkedList+PrivateVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LinkedList+PrivateVariables.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +154,11 @@
 		224E87A21613A01900E24DB1 /* NSDataLinkedListTests */ = {
 			isa = PBXGroup;
 			children = (
-				224E87A81613A01900E24DB1 /* NSDataLinkedListTests.h */,
-				224E87A91613A01900E24DB1 /* NSDataLinkedListTests.m */,
 				224E87A31613A01900E24DB1 /* Supporting Files */,
+				224E87BB1616544D00E24DB1 /* LinkedListTests.h */,
+				224E87BC1616544D00E24DB1 /* LinkedListTests.m */,
+				224E87BE16170FF400E24DB1 /* LinkedList+PrivateVariables.h */,
+				224E87BF16170FF400E24DB1 /* LinkedList+PrivateVariables.m */,
 			);
 			path = NSDataLinkedListTests;
 			sourceTree = "<group>";
@@ -288,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224E87AA1613A01900E24DB1 /* NSDataLinkedListTests.m in Sources */,
+				224E87BD1616544D00E24DB1 /* LinkedListTests.m in Sources */,
+				224E87C016170FF400E24DB1 /* LinkedList+PrivateVariables.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

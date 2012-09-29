@@ -27,11 +27,10 @@
     if(self) {
         _cacheSizeIncrements = increment;
         int bytesRequired = capacity * sizeof(Node);
-        nodeCache = [[NSMutableData alloc] initWithCapacity:bytesRequired];
+        nodeCache = [[NSMutableData alloc] initWithLength:bytesRequired];
         [self initialiseNodesAtOffset:0 count:capacity];
         freeNodeOffset = 0;
-        topNodeOffset = -1;
-        bottomNodeOffset = -1;
+        topNodeOffset = FINAL_NODE_OFFSET;
     }
     return self;
 }
@@ -54,20 +53,28 @@
 
 - (void)pushBack:(int)p
 {
+    // Prepare the new node
     Node *node = [self getNextFreeNode];
     node->value = p;
     node->nextNodeOffset = FINAL_NODE_OFFSET;
-    Node *searchNode = [self nodeAtOffset:topNodeOffset];
-    while (searchNode->nextNodeOffset != FINAL_NODE_OFFSET) {
-        searchNode = [self nodeAtOffset:searchNode->nextNodeOffset];
+    
+    // If the list is empty then just set topNodeOffset
+    if(topNodeOffset == FINAL_NODE_OFFSET) {
+        topNodeOffset = [self offsetOfNode:node];
+    } else {
+        // Otherwise, we need to find the current last node
+        Node *searchNode = [self nodeAtOffset:topNodeOffset];
+        while (searchNode->nextNodeOffset != FINAL_NODE_OFFSET) {
+            searchNode = [self nodeAtOffset:searchNode->nextNodeOffset];
+        }
+        // searchNode is the current end node
+        searchNode->nextNodeOffset = [self offsetOfNode:node];
     }
-    // searchNode is the current end node
-    searchNode->nextNodeOffset = [self offsetOfNode:node];
 }
 
 - (int)popFront
 {
-    if(topNodeOffset < 0) {
+    if(topNodeOffset == FINAL_NODE_OFFSET) {
         return INVALID_NODE_CONTENT;
     }
     
@@ -89,7 +96,7 @@
 - (int)popBack
 {
     // Find the penultimate node
-    if(topNodeOffset < 0) {
+    if(topNodeOffset == FINAL_NODE_OFFSET) {
         return INVALID_NODE_CONTENT;
     }
     

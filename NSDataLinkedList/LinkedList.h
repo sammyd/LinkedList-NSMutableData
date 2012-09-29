@@ -22,7 +22,6 @@ typedef struct Node
     NSMutableData *nodeCache;
     int freeNodeOffset;
     int topNodeOffset;
-    int bottomNodeOffset;
     int _cacheSizeIncrements;
 }
 
