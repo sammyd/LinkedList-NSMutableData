@@ -10,6 +10,7 @@
 
 @implementation ViewController
 
+#pragma mark - Memory management
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -31,7 +32,7 @@
     [super dealloc];
 }
 
-
+#pragma mark - UI Methods
 - (IBAction)btnRunPressed:(id)sender {
     if (testList) {
         [testList release];
@@ -47,7 +48,6 @@
 }
 
 
-
 #pragma mark - Profiling methods
 - (void)runTestWithList:(id<DynamicSizedArray>)list resultLabel:(UILabel *)lbl
 {
@@ -56,7 +56,6 @@
                                [[times objectAtIndex:0] doubleValue],
                                [[times objectAtIndex:1] doubleValue]];
 }
-
 
 - (NSArray*)runListProfileWithList:(id<DynamicSizedArray>)list maxSize:(int)maxSize
 {    

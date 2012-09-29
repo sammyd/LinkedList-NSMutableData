@@ -131,17 +131,13 @@
 		224E877E1613A01800E24DB1 /* NSDataLinkedList */ = {
 			isa = PBXGroup;
 			children = (
+				224E87C616173F2F00E24DB1 /* DataStructures */,
 				224E87871613A01800E24DB1 /* AppDelegate.h */,
 				224E87881613A01800E24DB1 /* AppDelegate.m */,
 				224E87901613A01800E24DB1 /* ViewController.h */,
 				224E87911613A01800E24DB1 /* ViewController.m */,
 				224E87931613A01800E24DB1 /* ViewController.xib */,
 				224E877F1613A01800E24DB1 /* Supporting Files */,
-				224E87B31613A1B800E24DB1 /* LinkedList.h */,
-				224E87B41613A1B800E24DB1 /* LinkedList.m */,
-				224E87BA1614EEB100E24DB1 /* DynamicSizedArray.h */,
-				224E87C31617373E00E24DB1 /* NSArrayDSA.h */,
-				224E87C41617373E00E24DB1 /* NSArrayDSA.m */,
 			);
 			path = NSDataLinkedList;
 			sourceTree = "<group>";
@@ -179,6 +175,18 @@
 				224E87A51613A01900E24DB1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		224E87C616173F2F00E24DB1 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				224E87BA1614EEB100E24DB1 /* DynamicSizedArray.h */,
+				224E87B31613A1B800E24DB1 /* LinkedList.h */,
+				224E87B41613A1B800E24DB1 /* LinkedList.m */,
+				224E87C31617373E00E24DB1 /* NSArrayDSA.h */,
+				224E87C41617373E00E24DB1 /* NSArrayDSA.m */,
+			);
+			name = DataStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
