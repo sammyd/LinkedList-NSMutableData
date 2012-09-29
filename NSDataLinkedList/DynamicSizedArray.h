@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define INVALID_NODE_CONTENT INT_MIN
+
 @protocol DynamicSizedArray <NSObject>
 
 @required

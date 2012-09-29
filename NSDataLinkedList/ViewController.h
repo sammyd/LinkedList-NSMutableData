@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "LinkedList.h"
+#import "NSArrayDSA.h"
 
 @interface ViewController : UIViewController {
-    NSMutableArray *testArray;
+    NSArrayDSA *testArray;
     LinkedList *testList;
 }
 

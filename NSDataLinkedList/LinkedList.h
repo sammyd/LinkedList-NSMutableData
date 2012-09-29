@@ -10,7 +10,6 @@
 #import "DynamicSizedArray.h"
 
 #define FINAL_NODE_OFFSET -1
-#define INVALID_NODE_CONTENT INT_MIN
 
 typedef struct Node
 {

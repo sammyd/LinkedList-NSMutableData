@@ -33,33 +33,48 @@
 
 
 - (IBAction)btnRunPressed:(id)sender {
-    NSArray *times = [self runListProfile];
-    self.lblDataResult.text = [NSString stringWithFormat:@"PushTime: %fs\nPopTime: %fs",
-                               [[times objectAtIndex:0] doubleValue],
-                               [[times objectAtIndex:1] doubleValue]];
+    if (testList) {
+        [testList release];
+    }
+    testList = [[LinkedList alloc] initWithCapacity:10000 incrementSize:10000];
+    [self runTestWithList:testList resultLabel:self.lblDataResult];
+    
+    if (testArray) {
+        [testArray release];
+    }
+    testArray = [[NSArrayDSA alloc] initWithCapacity:10000];
+    [self runTestWithList:testArray resultLabel:self.lblArrayResult];
 }
 
 
 
 #pragma mark - Profiling methods
-- (NSArray*)runListProfile
+- (void)runTestWithList:(id<DynamicSizedArray>)list resultLabel:(UILabel *)lbl
 {
-    testList = [[LinkedList alloc] initWithCapacity:10000 incrementSize:10000];
-    
+    NSArray *times = [self runListProfileWithList:list maxSize:10000000];
+    lbl.text = [NSString stringWithFormat:@"PushTime: %fs\nPopTime: %fs",
+                               [[times objectAtIndex:0] doubleValue],
+                               [[times objectAtIndex:1] doubleValue]];
+}
+
+
+- (NSArray*)runListProfileWithList:(id<DynamicSizedArray>)list maxSize:(int)maxSize
+{    
     double startTime = CACurrentMediaTime();
-    for (int i=0; i < 100000; i++) {
-        [testList pushFront:arc4random() % 1000000];
+    for (int i=0; i < maxSize; i++) {
+        [list pushFront:arc4random() % 1000000];
     }
     double pushTime = CACurrentMediaTime();
     
-    
     int poppedValue = 0;
     while (poppedValue != INVALID_NODE_CONTENT) {
-        poppedValue = [testList popFront];
+        poppedValue = [list popFront];
     }
     
     double popTime = CACurrentMediaTime();
     
-    return [NSArray arrayWithObjects:[NSNumber numberWithDouble:(pushTime - startTime)], [NSNumber numberWithDouble:(popTime - pushTime)], nil];
+    return [NSArray arrayWithObjects:[NSNumber numberWithDouble:(pushTime - startTime)],
+                                     [NSNumber numberWithDouble:(popTime - pushTime)],
+                                     nil];
 }
 @end

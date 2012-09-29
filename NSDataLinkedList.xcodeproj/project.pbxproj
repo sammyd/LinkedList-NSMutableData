@@ -26,6 +26,7 @@
 		224E87BD1616544D00E24DB1 /* LinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87BC1616544D00E24DB1 /* LinkedListTests.m */; };
 		224E87C016170FF400E24DB1 /* LinkedList+PrivateVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87BF16170FF400E24DB1 /* LinkedList+PrivateVariables.m */; };
 		224E87C21617361300E24DB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224E87C11617361300E24DB1 /* QuartzCore.framework */; };
+		224E87C51617373E00E24DB1 /* NSArrayDSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 224E87C41617373E00E24DB1 /* NSArrayDSA.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		224E87BE16170FF400E24DB1 /* LinkedList+PrivateVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LinkedList+PrivateVariables.h"; sourceTree = "<group>"; };
 		224E87BF16170FF400E24DB1 /* LinkedList+PrivateVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LinkedList+PrivateVariables.m"; sourceTree = "<group>"; };
 		224E87C11617361300E24DB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		224E87C31617373E00E24DB1 /* NSArrayDSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayDSA.h; sourceTree = "<group>"; };
+		224E87C41617373E00E24DB1 /* NSArrayDSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayDSA.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				224E87B31613A1B800E24DB1 /* LinkedList.h */,
 				224E87B41613A1B800E24DB1 /* LinkedList.m */,
 				224E87BA1614EEB100E24DB1 /* DynamicSizedArray.h */,
+				224E87C31617373E00E24DB1 /* NSArrayDSA.h */,
+				224E87C41617373E00E24DB1 /* NSArrayDSA.m */,
 			);
 			path = NSDataLinkedList;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				224E87891613A01800E24DB1 /* AppDelegate.m in Sources */,
 				224E87921613A01800E24DB1 /* ViewController.m in Sources */,
 				224E87B51613A1B800E24DB1 /* LinkedList.m in Sources */,
+				224E87C51617373E00E24DB1 /* NSArrayDSA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

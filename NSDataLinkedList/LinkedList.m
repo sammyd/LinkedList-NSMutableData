@@ -97,20 +97,28 @@
 {
     // Find the penultimate node
     if(topNodeOffset == FINAL_NODE_OFFSET) {
+        // The queue is empty
         return INVALID_NODE_CONTENT;
     }
     
     Node *searchNode = [self nodeAtOffset:topNodeOffset];
-    Node *priorSearchNode;
-    while (searchNode->nextNodeOffset != FINAL_NODE_OFFSET) {
-        priorSearchNode = searchNode;
+    if(searchNode->nextNodeOffset == FINAL_NODE_OFFSET) {
+        // This is the case when there's one node
+        topNodeOffset = FINAL_NODE_OFFSET;
+    } else {
+        // There's more than one node:
+        Node *priorSearchNode = searchNode;
         searchNode = [self nodeAtOffset:searchNode->nextNodeOffset];
+        while (searchNode->nextNodeOffset != FINAL_NODE_OFFSET) {
+            priorSearchNode = searchNode;
+            searchNode = [self nodeAtOffset:searchNode->nextNodeOffset];
+        }
+        // Change the last node
+        priorSearchNode->nextNodeOffset = FINAL_NODE_OFFSET;
     }
     
+    // Get the value we need to return
     int value = searchNode->value;
-    
-    // Change the last node
-    priorSearchNode->nextNodeOffset = FINAL_NODE_OFFSET;
 
     // Make this node available again
     searchNode->nextNodeOffset = freeNodeOffset;
